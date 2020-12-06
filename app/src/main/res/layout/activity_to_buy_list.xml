@@ -5,22 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    tools:context=".cartActivity">
+    android:gravity="center"
+    tools:context=".ToBuyList">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Shopping Cart"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:text="To but list"
+        android:textAllCaps="true"
+        android:textColor="@color/teal_green"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp" />
 
     <ListView
-        android:id="@+id/cartProductsList"
+        android:id="@+id/items_to_buy"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="10dp">
+    </ListView>
+
+
 </LinearLayout>

@@ -11,12 +11,13 @@ import android.widget.Toast
 class homePage : AppCompatActivity() {
 
     var categories = arrayOf("BAGS" , "TREATS" , "TEXTILES")
-    var images = intArrayOf(R.drawable.bags , R.drawable.treats , R.drawable.textile)
+    var images = intArrayOf(R.drawable.ic_launcher_background , R.drawable.ic_launcher_background
+            , R.drawable.ic_launcher_background)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-        val gridView = findViewById<GridView>(R.id.gridView)
+        val gridView = findViewById<GridView>(R.id.categoryView)
         val mainAdapter = MainAdapter(this, categories, images)
         gridView.adapter = mainAdapter
         gridView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, id ->
@@ -49,6 +50,11 @@ class homePage : AppCompatActivity() {
                 true
             }
             R.id.go_to_settings -> {
+                true
+            }
+            R.id.to_buy -> {
+                val intent = Intent(this, ToBuyList::class.java)
+                startActivity(intent)
                 true
             }
             else -> {

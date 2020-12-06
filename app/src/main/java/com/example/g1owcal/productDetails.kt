@@ -17,27 +17,32 @@ class productDetails : AppCompatActivity() {
         var products: Array<String> = arrayOf()
         val position = intent.extras!!.getString("position")
 
-        if (position.equals("BAGS")) {
-            viewName.text = position
-            viewImage.setImageResource(R.drawable.bags)
-            products = arrayOf("")
-        } else if (position.equals("TREATS")) {
-            viewName.text = position
-            viewImage.setImageResource(R.drawable.treats)
-            products = arrayOf(
-                "Ube Jam 12 oz - PhP 230.00", "Peanut Brittle 370g - PhP 185.00",
-                "Strawberry Jam 80z - PhP 225.00" +
-                        "Snow Balls 320g - PhP 320.00",
-                "Cashew Brittle 330g - PhP 295.00", "Cashew Crunch 250g - PhP 260.00", "Strawberry Jam 12oz - PhP 280.00"
-            )
-        } else if (position.equals("TEXTILE")) {
-            viewName.text = position
-            viewImage.setImageResource(R.drawable.textile)
-            products = arrayOf("")
+        when {
+            position.equals("BAGS") -> {
+                viewName.text = position
+                viewImage.setImageResource(R.drawable.ic_launcher_background)
+                products = arrayOf("")
+            }
+            position.equals("TREATS") -> {
+                viewName.text = position
+                viewImage.setImageResource(R.drawable.ic_launcher_background)
+                products = arrayOf(
+                        "Ube Jam 12 oz - PhP 230.00", "Peanut Brittle 370g - PhP 185.00",
+                        "Strawberry Jam 80z - PhP 225.00", "Snow Balls 320g - PhP 320.00",
+                        "Cashew Brittle 330g - PhP 295.00", "Cashew Crunch 250g - PhP 260.00",
+                        "Strawberry Jam 12oz - PhP 280.00")
+            }
+            position.equals("TEXTILE") -> {
+                viewName.text = position
+                viewImage.setImageResource(R.drawable.ic_launcher_background)
+                products = arrayOf("")
+            }
         }
-        var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, products)
-        var productsListView = findViewById<ListView>(R.id.albumDetailListView)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, products)
+        val productsListView = findViewById<ListView>(R.id.albumDetailListView)
         productsListView.adapter = adapter
+        registerForContextMenu(productsListView)
+
     }
 
 

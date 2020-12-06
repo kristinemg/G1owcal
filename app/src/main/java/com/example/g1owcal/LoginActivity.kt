@@ -3,39 +3,27 @@ package com.example.g1owcal
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.LinkMovementMethod
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         val fname = findViewById<EditText>(R.id.fname)
         val lname = findViewById<EditText>(R.id.lname)
         val email = findViewById<EditText>(R.id.email)
         val phoneNum = findViewById<EditText>(R.id.phoneNum)
-        val loginTxt = findViewById<TextView>(R.id.login)
 
-        findViewById<Button>(R.id.signUpBtn).setOnClickListener{
+        findViewById<Button>(R.id.loginBtn).setOnClickListener {
             val fname = fname.text.toString()
             val lname = lname.text.toString()
             val email = email.text.toString()
             val phoneNum = phoneNum.text.toString()
 
-
             val intent = Intent(this, homePage::class.java)
-            //intent.putExtra("fname", fname)
             startActivity(intent)
-        }
-
-        loginTxt.setOnClickListener{
-
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            loginTxt.movementMethod = LinkMovementMethod.getInstance()
         }
     }
 }

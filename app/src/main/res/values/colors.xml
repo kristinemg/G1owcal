@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="teal">#016367</color>
+    <color name="slate">#578384</color>
+    <color name="teal_green">#3D5B59</color>
+    <color name="mint">#B5E5CF</color>
+    <color name="salmon">#FCB5AC</color>
+    <color name="mauve">#B99095</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

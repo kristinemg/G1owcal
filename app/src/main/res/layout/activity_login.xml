@@ -8,19 +8,37 @@
     android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="175dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:srcCompat="@drawable/glowcal"
-        tools:srcCompat="@drawable/glowcal" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:srcCompat="@drawable/glowcal"
+            android:layout_marginStart="40dp"
+            tools:srcCompat="@drawable/glowcal" />
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:layout_marginStart="45dp"
+            android:textColor="@color/teal_green"
+            android:textSize="36sp" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/fname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName" />
@@ -41,8 +59,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Phone Number"
-        android:inputType="textPersonName|phone"
-        />
+        android:inputType="textPersonName|phone" />
 
     <EditText
         android:id="@+id/email"
@@ -54,37 +71,11 @@
         android:inputType="textPersonName|textEmailSubject" />
 
     <Button
-        android:id="@+id/signUpBtn"
+        android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Sign-up" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="40dp">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already have an account?" />
-
-        <TextView
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:clickable="true"
-            android:linksClickable="true"
-            android:text="Login"
-            android:textColor="@color/slate"
-            android:textColorLink="@color/slate" />
-
-    </LinearLayout>
-
-
+        android:text="Login"
+        android:textSize="12sp" />
 
 </LinearLayout>

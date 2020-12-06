@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "857929446065",
+    "firebase_url": "https://g1owcal-default-rtdb.firebaseio.com",
+    "project_id": "g1owcal",
+    "storage_bucket": "g1owcal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857929446065:android:fa227f73fb33d7cb38e890",
+        "android_client_info": {
+          "package_name": "com.example.g1owcal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857929446065-19f9nikf07ethpmst9flpua2vaq2vd4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOMkIDL1w3KSgbucVty8rD1nUaW8TniNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857929446065-19f9nikf07ethpmst9flpua2vaq2vd4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
