@@ -13,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
 
         val fname = findViewById<EditText>(R.id.fname)
         val lname = findViewById<EditText>(R.id.lname)
+        val password = findViewById<EditText>(R.id.password)
         val email = findViewById<EditText>(R.id.email)
         val phoneNum = findViewById<EditText>(R.id.phoneNum)
 

@@ -43,7 +43,7 @@ class homePage : AppCompatActivity() {
         prodView.adapter = prodAdapter
         prodView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
             val intent = Intent(this, productListsDetails::class.java)
-            intent.putExtra("position", products[position])
+            intent.putExtra("product", products[position])
             startActivity(intent)
         }
     }
@@ -68,9 +68,6 @@ class homePage : AppCompatActivity() {
                 true
             }
             R.id.go_to_user_account -> {
-                true
-            }
-            R.id.go_to_settings -> {
                 true
             }
             R.id.to_buy -> {

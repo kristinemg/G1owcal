@@ -1,4 +1,4 @@
-package com.example.g1owcal
+package com.example.g1owcal.models
 
 import com.google.firebase.database.IgnoreExtraProperties
 

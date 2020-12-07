@@ -1,4 +1,4 @@
-package com.example.g1owcal
+package com.example.g1owcal.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.g1owcal.R
+
 internal class ProductAdapter(
         private val context: Context,
         private val numbersInWords: Array<String>,

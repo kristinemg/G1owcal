@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import com.example.g1owcal.models.ToBuyModel
 
 class arrayAdapter(var mcont: Context, var res: Int, var list: ArrayList<ToBuyModel>): ArrayAdapter<ToBuyModel>(mcont,res, list ){
     override fun getCount(): Int {

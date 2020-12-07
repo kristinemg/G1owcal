@@ -1,5 +1,6 @@
-package com.example.g1owcal
+package com.example.g1owcal.handlers
 
+import com.example.g1owcal.models.ToBuyModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -27,4 +28,13 @@ class ItemTableHandler{
         channelRef.child(ytList.id!!).setValue(ytList)
         return true
     }
+
+    fun add (ytList: ToBuyModel): Boolean{
+        val id = channelRef.push().key
+        ytList.id = id
+
+        channelRef.child(id!!).setValue(ytList)
+        return true
+    }
+
 }

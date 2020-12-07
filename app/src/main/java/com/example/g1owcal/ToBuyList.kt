@@ -1,15 +1,17 @@
 package com.example.g1owcal
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
+import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.example.g1owcal.handlers.ItemTableHandler
+import com.example.g1owcal.models.ToBuyModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -70,22 +72,22 @@ class ToBuyList : AppCompatActivity() {
         })
     }
 
-    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
-        super.onCreateContextMenu(menu, v, menuInfo)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.add_to_list, menu)
+        return true
     }
 
-    override fun onContextItemSelected(item: MenuItem): Boolean {
-        val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
-        val yt = itemsOnList[info.position]
-        val ytID = yt.id.toString()
-        return when(item.itemId){
-            R.id.add_to_list ->{
-                itemTableHandler.delete(ytID)
-                return true
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.add_to_list -> {
+                val intent = Intent(this, AddToBuyItems::class.java)
+                startActivity(intent)
+                true
             }
-            else -> super.onContextItemSelected(item)
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
     }
 }

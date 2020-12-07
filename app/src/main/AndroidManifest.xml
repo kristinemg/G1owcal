@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.G1owcal">
-        <activity android:name=".ToBuyList"></activity>
+        <activity android:name=".AddToBuyItems"></activity>
+        <activity android:name=".ToBuyList" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".cartActivity" />
         <activity android:name=".productDetails" />

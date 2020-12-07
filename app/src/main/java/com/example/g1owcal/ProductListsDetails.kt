@@ -15,7 +15,7 @@ class productListsDetails : AppCompatActivity() {
         val viewImage = findViewById<ImageView>(R.id.productImage)
 
         var products: Array<String> = arrayOf()
-        val position = intent.extras!!.getString("position")
+        val position = intent.extras!!.getString("product")
 
         when {
             position.equals("Ube Jam 12 oz") -> {
