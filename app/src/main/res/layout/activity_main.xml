@@ -17,48 +17,29 @@
         tools:srcCompat="@drawable/glowcal" />
 
     <EditText
-        android:id="@+id/fname"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="70dp"
         android:ems="10"
-        android:hint="First Name"
-        android:inputType="textPersonName" />
+        android:hint="Email Address"
+        android:inputType="textPersonName|textEmailSubject" />
 
     <EditText
-        android:id="@+id/lname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/phoneNum"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Phone Number"
-        android:inputType="textPersonName|phone"
-        />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Email Address"
-        android:inputType="textPersonName|textEmailSubject" />
+        android:inputType="textPersonName|phone" />
 
     <Button
-        android:id="@+id/signUpBtn"
+        android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Sign-up" />
+        android:layout_marginTop="30dp"
+        android:text="LOGIN" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -73,13 +54,13 @@
             android:text="Already have an account?" />
 
         <TextView
-            android:id="@+id/login"
+            android:id="@+id/signUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:clickable="true"
             android:linksClickable="true"
-            android:text="Login"
+            android:text="sign-up"
             android:textColor="@color/slate"
             android:textColorLink="@color/slate" />
 

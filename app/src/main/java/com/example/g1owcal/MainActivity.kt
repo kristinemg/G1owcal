@@ -13,29 +13,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fname = findViewById<EditText>(R.id.fname)
-        val lname = findViewById<EditText>(R.id.lname)
         val email = findViewById<EditText>(R.id.email)
-        val phoneNum = findViewById<EditText>(R.id.phoneNum)
-        val loginTxt = findViewById<TextView>(R.id.login)
+        val password = findViewById<EditText>(R.id.password)
+        val signUp = findViewById<TextView>(R.id.signUp)
 
-        findViewById<Button>(R.id.signUpBtn).setOnClickListener{
-            val fname = fname.text.toString()
-            val lname = lname.text.toString()
+        findViewById<Button>(R.id.loginBtn).setOnClickListener{
             val email = email.text.toString()
-            val phoneNum = phoneNum.text.toString()
-
+            val password = password.text.toString()
 
             val intent = Intent(this, homePage::class.java)
             //intent.putExtra("fname", fname)
             startActivity(intent)
         }
 
-        loginTxt.setOnClickListener{
+        signUp.setOnClickListener{
 
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
-            loginTxt.movementMethod = LinkMovementMethod.getInstance()
+            signUp.movementMethod = LinkMovementMethod.getInstance()
         }
     }
 }
