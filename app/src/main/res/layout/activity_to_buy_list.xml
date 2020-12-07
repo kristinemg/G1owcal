@@ -12,7 +12,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="To but list"
+        android:text="To buy list"
         android:textAllCaps="true"
         android:textColor="@color/teal_green"
         android:layout_marginTop="10dp"

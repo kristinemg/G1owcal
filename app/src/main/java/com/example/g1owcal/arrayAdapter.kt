@@ -12,7 +12,7 @@ class arrayAdapter(var mcont: Context, var res: Int, var list: ArrayList<ToBuyMo
     override fun getCount(): Int {
         return 10
     }
-    override fun getItem(position: Int) : ToBuyModel? {
+    override fun getItem(position: Int) : ToBuyModel {
         return list[position]
     }
 
@@ -21,9 +21,9 @@ class arrayAdapter(var mcont: Context, var res: Int, var list: ArrayList<ToBuyMo
         val inflater = LayoutInflater.from(mcont)
         val view = inflater.inflate(res, null)
         val title = view.findViewById<TextView>(R.id.titleDisplay)
-        val rank = view.findViewById<TextView>(R.id.rankDisplay)
-        title.text =list[position].title
-//        rank.text = list[position].rank.toString()
+        val items = view.findViewById<TextView>(R.id.rankDisplay)
+        title.text =list[position].item_title
+        items.text = list[position].items
         return view
     }
 }

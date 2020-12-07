@@ -13,6 +13,18 @@ class homePage : AppCompatActivity() {
     var categories = arrayOf("BAGS" , "TREATS" , "TEXTILES")
     var images = intArrayOf(R.drawable.ic_launcher_background , R.drawable.ic_launcher_background
             , R.drawable.ic_launcher_background)
+
+    var products = arrayOf("Ube Jam 12 oz", "Peanut Brittle 370g",
+            "Strawberry Jam 80z", "Snow Balls 320g", "Cashew Brittle 330g",
+            "Cashew Crunch 250g", "Strawberry Jam 12oz")
+
+    var productPrice = arrayOf("PhP 230.00", "PhP 185.00", "PhP 225.00", "PhP 320.00",
+                                "PhP 295.00", "PhP 260.00", "PhP 280.00")
+
+    var prod_image =  intArrayOf(R.drawable.ube_jam, R.drawable.peanut_brittle, R.drawable.strawberry_jam,
+                        R.drawable.snow_balls, R.drawable.cashew_brittle,
+                        R.drawable.cashew_crunch,R.drawable.strawberry_jam_big)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
@@ -20,9 +32,18 @@ class homePage : AppCompatActivity() {
         val gridView = findViewById<GridView>(R.id.categoryView)
         val mainAdapter = MainAdapter(this, categories, images)
         gridView.adapter = mainAdapter
-        gridView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, id ->
+        gridView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
             val intent = Intent(this, productDetails::class.java)
             intent.putExtra("position", categories[position])
+            startActivity(intent)
+        }
+
+        val prodView = findViewById<GridView>(R.id.prodView)
+        val prodAdapter = MainAdapter (this, products,prod_image)
+        prodView.adapter = prodAdapter
+        prodView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+            val intent = Intent(this, productListsDetails::class.java)
+            intent.putExtra("position", products[position])
             startActivity(intent)
         }
     }
